@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+ul, #myUL {
+	list-style-type: none;
+}
+
+#myUL {
+	margin: 0;
+	padding: 0;
+}
+
+.caret {
+	cursor: pointer;
+	-webkit-user-select: none; /* Safari 3.1+ */
+	-moz-user-select: none; /* Firefox 2+ */
+	-ms-user-select: none; /* IE 10+ */
+	user-select: none;
+}
+
+.caret::before {
+	content: "\25B6";
+	color: black;
+	display: inline-block;
+	margin-right: 6px;
+}
+
+.caret-down::before {
+	-ms-transform: rotate(90deg); /* IE 9 */
+	-webkit-transform: rotate(90deg); /* Safari */'
+	transform: rotate(90deg);  
+}
+
+/* Скрыть вложенный список. */
+.nested {
+	display: none;
+}
+
+/* Показать вложенный список. */
+.active {
+	display: block;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Tree View</h2>
+
+<ul id="myUL">
+	<li>
+		<span class="caret">Beverages</span>
+		<ul class="nested">
+			<li>Water</li>
+			<li>Coffee</li>
+			<li>
+				<span class="caret">Tea</span>
+				<ul class="nested">
+					<li>Black Tea</li>
+					<li>White Tea</li>
+					<li>
+						<span class="caret">Green Tea</span>
+						<ul class="nested">
+							<li>Sencha</li>
+							<li>Gyokuro</li>
+							<li>Matcha</li>
+							<li>Pi Lo Chun</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="caret">Tea2</span>
+				<ul class="nested">
+					<li>Black Tea</li>
+					<li>White Tea</li>
+					<li>
+						<span class="caret">Green Tea</span>
+						<ul class="nested">
+							<li>Sencha</li>
+							<li>Gyokuro</li>
+							<li>Matcha</li>
+							<li>Pi Lo Chun</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<script>
+
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+	// Получить объекта класса "caret".
+	console.log(toggler[i]);
+	// Получить родительский элемент для объекта класса "caret", в нашем случае это список <li>.
+	console.log(toggler[i].parentElement);
+	// В элементе <li> получить первый элемент класса "nested".
+	console.log(toggler[i].parentElement.querySelector(".nested"));
+
+	// Элементу добавляем функцию для обработки собятия "click".
+	toggler[i].addEventListener("click", function() {
+		// В элементе класса "nested" найти элемент с классом "active" (видимый),
+		// если такого класса в элементе нет, то добавить, если есть, то удалить класс из элемента.
+		this.parentElement.querySelector(".nested").classList.toggle("active");
+		// Повернуть стрелку на 90 градусов.
+		this.classList.toggle("caret-down");
+	});
+}
+</script>
+
+</body>
+</html>
