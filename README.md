@@ -11,3 +11,8 @@
 
 # HTTP benchmarking
 [wrk](https://github.com/wg/wrk)  
+
+
+# Java web servers
+[Spark](http://sparkjava.com/)  
+[Jetty](https://www.eclipse.org/jetty/)  
