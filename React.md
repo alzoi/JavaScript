@@ -8,7 +8,7 @@
 [Fastify JS](https://www.fastify.io/)  
 [Express.js](https://expressjs.com/ru/)  
 [Nestjs.com](https://nestjs.com/)  
-[Nuxt.org](https://nuxt.org/)
+[Nuxtjs.org](https://nuxtjs.org/)
 
 # Курсы по React
 [React JS с Нуля до Профи. Полное руководство](https://www.udemy.com/course/reactjswfs/)  
