@@ -7,7 +7,7 @@
 [Koa JS](https://koajs.com/)  
 [Fastify JS](https://www.fastify.io/)  
 [Express.js](https://expressjs.com/ru/)  
-[Nestjs.com](https://nestjs.com/). 
+[Nestjs.com](https://nestjs.com/)  
 [Nuxt.org](https://nuxt.org/)
 
 # Курсы по React
