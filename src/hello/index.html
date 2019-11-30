@@ -61,27 +61,59 @@
       // });      
       // oList.bindAggregation("items","ZLIST1>/value",oItemTemplate);
 
-      // Подключаемся к серверу и создаём OData модель (данные принимаем в json).
-      var oModel_D = new sap.ui.model.odata.ODataModel(
-        "https://services.odata.org/Northwind/Northwind.svc/", true
-      );  
+      // // Подключаемся к серверу и создаём OData модель версии 2 (данные принимаем в json).
+      // var oModel_D = new sap.ui.model.odata.v2.ODataModel(
+      //   "https://services.odata.org/Northwind/Northwind.svc/", true
+      // );  
       
-      // Список.
+      // // Список.
+      // var oList = new sap.m.List({
+      //   id: "ListId",
+      //   //mode: sap.m.ListMode.SingleSelect
+      // });
+      // // Описание структуры списка.
+      // var oListItem = new sap.m.StandardListItem({
+      //   title:        "{CompanyName}",
+      //   description:  "{City}",
+      //   press:        onListPress,
+      //   type:         "Navigation"     
+      // });
+      // // Списку присоединяем структуру и связываем с таблицей /Customers модели OData.
+      // oList.bindItems("/Customers", oListItem, null, null);
+      // // Присваиваем модель списку.
+      // oList.setModel(oModel_D);
+
+      // Подключаемся к серверу и создаём OData модель версии 4.
+      var oModel = new sap.ui.model.odata.v4.ODataModel({
+        groupId: "$direct",
+        synchronizationMode: "None",
+        serviceUrl: "http://services.odata.org/TripPinRESTierService/",
+      });
+      // Устанавливаем модель глобально для всего приложения, будет доступна по имени ZLIST1.
+      //sap.ui.getCore().setModel(oModel,'ZLIST1');
+      
+      // Создаём модель.
       var oList = new sap.m.List({
-        id: "ListId",
-        //mode: sap.m.ListMode.SingleSelect
+        includeItemInSelection: true,
+        mode: "SingleSelect",
+        select: function(oEvent) {
+          var listBindingContext = oEvent.getParameter("listItem").getBindingContext("ZLIST1");
+          //console.log(oEvent.oSource.getBindingContext());
+          console.log(listBindingContext);          
+        }
       });
-      // Описание структуры списка.
-      var oListItem = new sap.m.StandardListItem({
-        title:        "{CompanyName}",
-        description:  "{City}",
-        press:        onListPress,
-        type:         "Navigation"     
+      // Устанавливаем модель списку, модель будет доступна по имени ZLIST1.
+      oList.setModel(oModel,'ZLIST1');
+      
+      // Списку присоединяем описание структуры и связываем с таблицей /People модели OData.
+      oList.bindItems({
+        path: "ZLIST1>/People",
+        template: new sap.m.StandardListItem({
+          title: "{ZLIST1>FirstName} {ZLIST1>LastName}",
+          description: { path : "ZLIST1>UserName" }
+        })
       });
-      // Списку присоединяем структуру и связываем с таблицей /Customers модели OData.
-      oList.bindItems("/Customers", oListItem, null, null);
-      // Присваиваем модель списку.
-      oList.setModel(oModel_D);
+      
       oList.placeAt("content4");
 
     });
