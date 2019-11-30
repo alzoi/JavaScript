@@ -1,4 +1,5 @@
 <!-- index.html -->
+<!-- Hello World sapui5 -->
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -41,7 +42,6 @@
         sap.m.MessageToast.show("Hello, world!");
       });
 
-
       // // Подключаемся к серверу и создаём JSON модель.
       // var oModel = new sap.ui.model.json.JSONModel(
       //   "http://services.odata.org/Northwind/Northwind.svc/Employees?$format=json",
@@ -82,6 +82,10 @@
       // oList.bindItems("/Customers", oListItem, null, null);
       // // Присваиваем модель списку.
       // oList.setModel(oModel_D);
+      // Обработка нажатия на строку списка.
+      // function onListPress(oEvent){
+      //   console.log(oEvent.oSource.getBindingContext());
+      // }
 
       // Подключаемся к серверу и создаём OData модель версии 4.
       var oModel = new sap.ui.model.odata.v4.ODataModel({
@@ -96,6 +100,7 @@
       var oList = new sap.m.List({
         includeItemInSelection: true,
         mode: "SingleSelect",
+        width: "250px",
         select: function(oEvent) {
           var listBindingContext = oEvent.getParameter("listItem").getBindingContext("ZLIST1");
           //console.log(oEvent.oSource.getBindingContext());
@@ -110,7 +115,7 @@
         path: "ZLIST1>/People",
         template: new sap.m.StandardListItem({
           title: "{ZLIST1>FirstName} {ZLIST1>LastName}",
-          description: { path : "ZLIST1>UserName" }
+          description: {path: "ZLIST1>UserName"}
         })
       });
       
@@ -118,10 +123,6 @@
 
     });
 
-    // Обработка нажатия на строку списка.
-    function onListPress(oEvent){
-      console.log(oEvent.oSource.getBindingContext());
-    }
   </script>
 
 </head>
