@@ -1,0 +1,102 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Document</title>
+
+  <script
+    id="sap-ui-bootstrap"
+    src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+    data-sap-ui-theme='sap_fiori_3'
+    data-sap-ui-libs='sap.m'
+    data-sap-ui-xx-waitForTheme="true"
+    data-sap-ui-preload="async"
+    data-sap-ui-compatVersion="edge"
+    data-sap-ui-resourceroots='{
+      "zui_tmc": "./"
+    }'
+  >  
+  </script>
+
+  <script>
+    // Присоединяем к событию Init "Загрузка библиотеки" функцию обработчик.
+    sap.ui.getCore().attachInit(function () {
+    
+      // Создаём контролы sapui5 и размещаем их в тегах с id=content*.
+      new sap.m.Text({text: "Hello World!"}).placeAt("content1");
+
+      let oLabel = new sap.m.Label().setText("Привет Мир!").placeAt("content2");
+
+      let oButton = new sap.m.Button();
+      oButton.setText("OK");
+      oButton.placeAt("content3");
+      
+      // Кнопки oButton подключаем обработчик события "Нажатие кнопки". 
+      oButton.attachPress(function(){
+        sap.m.MessageToast.show("Hello, world!");
+      });
+
+
+      // // Подключаемся к серверу и создаём JSON модель.
+      // var oModel = new sap.ui.model.json.JSONModel(
+      //   "http://services.odata.org/Northwind/Northwind.svc/Employees?$format=json",
+      //   true
+      // );
+      // // Устанавливаем модель глобально для всего приложения, будет доступна по имени ZLIST1.
+      // sap.ui.getCore().setModel(oModel,'ZLIST1');
+      // Список.
+      // var oList = new sap.m.List({
+      //   id: "ListId",
+      //   mode: sap.m.ListMode.SingleSelect
+      // });      
+      // var oItemTemplate = new sap.m.StandardListItem({
+      //   id:           "sList",
+      //   title:        "{ZLIST1>LastName}",
+      //   description:  "{ZLIST1>EmployeeID}"
+      // });      
+      // oList.bindAggregation("items","ZLIST1>/value",oItemTemplate);
+
+      // Подключаемся к серверу и создаём OData модель (данные принимаем в json).
+      var oModel_D = new sap.ui.model.odata.ODataModel(
+        "http://services.odata.org/Northwind/Northwind.svc/", true
+      );  
+      
+      // Список.
+      var oList = new sap.m.List({
+        id: "ListId",
+        //mode: sap.m.ListMode.SingleSelect
+      });
+      var oListItem = new sap.m.StandardListItem({
+        title:        "{CompanyName}",
+        description:  "{City}",
+        press:        onListPress,
+        type:         "Navigation"     
+      });      
+      oList.bindItems("/Customers", oListItem, null, null);
+      // Присваиваем модель списку.
+      oList.setModel(oModel_D);
+      oList.placeAt("content4");
+
+    });
+
+    // Обработка нажатия на список.
+    function onListPress(oEvent){
+      console.log(oEvent.oSource.getBindingContext());
+    }
+  </script>
+
+</head>
+<body class="sapui5">
+
+  <div id="content1"></div>
+  <div id="content2"></div>
+  <div id="content3"></div>
+  <div id="content4"></div>
+
+</body>
+</html>
