@@ -63,7 +63,7 @@
 
       // Подключаемся к серверу и создаём OData модель (данные принимаем в json).
       var oModel_D = new sap.ui.model.odata.ODataModel(
-        "http://services.odata.org/Northwind/Northwind.svc/", true
+        "https://services.odata.org/Northwind/Northwind.svc/", true
       );  
       
       // Список.
@@ -71,12 +71,14 @@
         id: "ListId",
         //mode: sap.m.ListMode.SingleSelect
       });
+      // Описание структуры списка.
       var oListItem = new sap.m.StandardListItem({
         title:        "{CompanyName}",
         description:  "{City}",
         press:        onListPress,
         type:         "Navigation"     
-      });      
+      });
+      // Списку присоединяем структуру и связываем с таблицей /Customers модели OData.
       oList.bindItems("/Customers", oListItem, null, null);
       // Присваиваем модель списку.
       oList.setModel(oModel_D);
