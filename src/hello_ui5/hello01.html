@@ -96,7 +96,7 @@
       // Устанавливаем модель глобально для всего приложения, будет доступна по имени ZLIST1.
       //sap.ui.getCore().setModel(oModel,'ZLIST1');
       
-      // Создаём модель.
+      // Создаём список.
       var oList = new sap.m.List({
         includeItemInSelection: true,
         mode: "SingleSelect",
@@ -121,7 +121,7 @@
       
       oList.placeAt("content4");
       
-      // Создаём модель
+      // Создаём модель для JSON данных.
       var oModel2 = new sap.ui.model.json.JSONModel();
       // Подключаемся к серверу и загружаем JSON модель.
       oModel2.loadData("https://serv/sap/opu/odata/sap/ZMM_TEST1_SRV/Z_STAFFSet?$format=json")
