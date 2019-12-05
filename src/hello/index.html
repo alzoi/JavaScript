@@ -120,6 +120,31 @@
       });
       
       oList.placeAt("content4");
+      
+      // Создаём модель
+      var oModel2 = new sap.ui.model.json.JSONModel();
+      // Подключаемся к серверу и загружаем JSON модель.
+      oModel2.loadData("https://saptest.snos.ru:8002/sap/opu/odata/sap/ZMM_TEST1_SRV/Z_STAFFSet?$format=json")
+        .then(res=>{
+          // Устанавливаем модель глобально для всего приложения, будет доступна по имени ZLIST1.
+          sap.ui.getCore().setModel(oModel2,'ZLIST1');
+          // Создаём список.
+          var oList2 = new sap.m.List({
+            id: "myList2",
+            mode: sap.m.ListMode.SingleSelect
+          });
+          // Списку устанавливаем глобальную модель ZLIST2.
+          oList2.setModel(sap.ui.getCore().getModel("ZLIST2"));
+          
+          // Присоединяем списку данные модели, расположенные в ветке /d/results/
+          oList2.bindItems("/d/results/",
+            new sap.m.StandardListItem({ 
+              title:"{FirstName}"
+            })
+          );
+
+          oList2.placeAt("content5");
+        });      
 
     });
 
@@ -132,6 +157,7 @@
   <div id="content2"></div>
   <div id="content3"></div>
   <div id="content4"></div>
+  <div id="content5"></div>
 
 </body>
 </html>
