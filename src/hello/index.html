@@ -124,7 +124,7 @@
       // Создаём модель
       var oModel2 = new sap.ui.model.json.JSONModel();
       // Подключаемся к серверу и загружаем JSON модель.
-      oModel2.loadData("https://saptest.snos.ru:8002/sap/opu/odata/sap/ZMM_TEST1_SRV/Z_STAFFSet?$format=json")
+      oModel2.loadData("https://serv/sap/opu/odata/sap/ZMM_TEST1_SRV/Z_STAFFSet?$format=json")
         .then(res=>{
           // Устанавливаем модель глобально для всего приложения, будет доступна по имени ZLIST1.
           sap.ui.getCore().setModel(oModel2,'ZLIST1');
