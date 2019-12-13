@@ -1,0 +1,30 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.fontSize": 18,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "workbench.colorTheme": "Hop Light",
+    "workbench.activityBar.visible": true,
+    "editor.minimap.enabled": false,
+    
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "terminal.integrated.rendererType": "dom",
+    "breadcrumbs.enabled": false,
+    "git.confirmSync": false,
+    "cSpell.language": "en, ru",
+    "workbench.iconTheme": "material-icon-theme",
+    "[javascript]": {
+      //"editor.defaultFormatter": "vscode.typescript-language-features"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "bracket-pair-colorizer-2.colors": [
+      "Black",
+      "Crimson",
+      "DodgerBlue",
+      "darkorange",
+      "mediumseagreen",
+      "darkviolet"
+    ],
+    "bracket-pair-colorizer-2.showHorizontalScopeLine": false,
+}
