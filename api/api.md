@@ -58,3 +58,52 @@ module.exports = {
   ]
 }
 ```
+# /server/server.js
+```js
+const express = require('express');
+
+const app = express();
+
+app.get('/test', (req, res) => {
+  console.log('test');
+  res.send('Hello test');
+});
+
+app.listen('5000', () => console.log('Start 5000'));
+```
+
+# /src/app.js
+```js
+const but = document.getElementById('BtnTest');
+
+but.addEventListener('click', (event) =>{
+  // Отключаем поведение по умолчанию.
+  event.preventDefault();
+  //console.log('test');
+  getTest();
+});
+
+
+async function getTest() {
+  const resp = await fetch('/test');
+  const data = await resp.json();
+  console.log(data);
+}
+```
+
+# /src/index.html
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Hello, World!</h1>
+  <button id="BtnTest">Test</button>
+</body>
+</html>
+```
