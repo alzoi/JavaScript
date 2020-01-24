@@ -13,12 +13,14 @@ npm i express
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "serv": "nodemon server/server.js"
+    "serv": "nodemon server/server.js",
+    "dev": "concurrently \"npm run serv\" \"npm start\""
   },
   "author": "Zoin <al.zoin@ya.ru>",
   "license": "ISC",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
     "nodemon": "^2.0.2",
     "webpack": "^4.41.5",
@@ -107,3 +109,9 @@ async function getTest() {
 </body>
 </html>
 ```
+
+# Запуск для тестирования разработк, в настройках devServer используется проксирование запросов от клиента 3000 на сервер 5000
+```
+npm run dev
+```
+
