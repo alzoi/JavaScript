@@ -3,7 +3,7 @@ npm i -D webpack webpack-cli webpack-dev-server html-webpack-plugin clean-webpac
 npm i express
 ```
 # webpack.config.js
-```json
+```js
 const path = require('path');
 const HTMLPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
