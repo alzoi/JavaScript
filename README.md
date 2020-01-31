@@ -2,7 +2,7 @@
 
 [Современный учебник JavaScript](https://learn.javascript.ru/)  
 [Под капотом JavaScript'а в браузере](https://www.youtube.com/watch?v=H0TyegLaLgs)  
-
+[Насколько важен порядок свойств в объектах JavaScript?](https://habr.com/ru/post/486162/)  
 
 # ASP.NET Core (web приложения на c#)
 [Учебник. Создание веб-API с помощью ASP.NET Core](https://docs.microsoft.com/ru-ru/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.0&tabs=visual-studio)  
