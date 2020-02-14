@@ -32,3 +32,6 @@ https://learn.javascript.ru/array-iteration
 # Асинхронность в JavaScript
 https://flaviocopes.com/javascript-async-await-array-map/
 https://www.sitepoint.com/delay-sleep-pause-wait/
+
+# App Ideas
+https://github.com/app-ideas/app-ideas
