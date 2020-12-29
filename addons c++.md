@@ -101,6 +101,7 @@ node-gyp -m build
 ```
 C:\Users\<UserName>\AppData\Local\node-gyp\Cache\<NodeVersion>\include\node
 ```
+Данная папка создаётся в момент конфигурации сборки node-gyp configure.
 
 ## Запуск кода
 ```
