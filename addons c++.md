@@ -97,7 +97,7 @@ console.timeEnd('js');
 node-gyp configure
 node-gyp -m build
 ```
-## Расположение заголовочных файлов
+Расположение заголовочных файлов
 ```
 C:\Users\<UserName>\AppData\Local\node-gyp\Cache\<NodeVersion>\include\node
 ```
