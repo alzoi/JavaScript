@@ -18,7 +18,7 @@
 [Jetty](https://www.eclipse.org/jetty/)  
 
 # Редакторы  
-[WebStorm](https://www.jetbrains.com/webstorm/)
+[WebStorm](https://www.jetbrains.com/webstorm/)  
 [Visual Studio Code](https://code.visualstudio.com/)
 
 
