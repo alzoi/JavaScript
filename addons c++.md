@@ -39,7 +39,7 @@ namespace hello {
   using v8::Value;
   using v8::Number;
 
-  void Method(const FunctionCallbackInfo<Value>& args) {
+  void Method_calc(const FunctionCallbackInfo<Value>& args) {
     Isolate* isolate = args.GetIsolate();
     // args.GetReturnValue().Set(String::NewFromUtf8(isolate, "world").ToLocalChecked());
     
@@ -54,9 +54,9 @@ namespace hello {
     //Local<Number> total = Number::New(isolate, x);
     args.GetReturnValue().Set(total);
   }
-  // Определяем функцию инициализации экспортируем метод-addon наружу под именем calc.
+  // Определяем функцию инициализации и экспортируем метод-аддона Method_calc наружу под именем calc.
   void Initialize(Local<Object> exports) {
-    NODE_SET_METHOD(exports, "calc", Method);
+    NODE_SET_METHOD(exports, "calc", Method_calc);
   }
   NODE_MODULE(NODE_GYP_MODULE_NAME, Initialize)
 
