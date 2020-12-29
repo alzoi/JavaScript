@@ -15,7 +15,8 @@ npm install -g --production windows-build-tools
   ]
 }
 ```
-## Конфигурация проекта
+## Сборка addon
 ```
 node-gyp configure
+node-gyp build
 ```
