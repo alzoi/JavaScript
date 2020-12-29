@@ -62,7 +62,7 @@ namespace hello {
 
 ## Файл index.js
 ```js
-// Подключаем модуль hello.
+// Подключаем модуль расширения hello.
 const hello = require('./build/Release/hello.node');
 
 function calc_js() {
