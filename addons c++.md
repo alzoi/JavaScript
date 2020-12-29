@@ -63,19 +63,21 @@ const hello = require('./build/Release/hello.node');
 
 function calc_js() {
   let i, x = 100.32462344, y = 200.33345344;
-  for(i=0; i < 2_000_000_000; ++i){
+  for(i=0; i < 2_000_000_000; i++){
     x += y;
   }
   const total = x;
   return total;
 }
 
+// Скорость работы кода C++.
 console.time('c++');
-hello.calc();
+console.log(hello.calc());
 console.timeEnd('c++');
 
+// Скорость работы кода JavaScript.
 console.time('js');
-calc_js();
+console.log(calc_js());
 console.timeEnd('js');
 ```
 
@@ -87,4 +89,12 @@ node-gyp build
 ## Запуск кода
 ```
 node index.js
+```
+
+## Вывод
+```
+400666902243.5126
+c++: 2879.506ms
+400666902243.5126
+js: 5738.011ms
 ```
