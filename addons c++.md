@@ -10,14 +10,14 @@ npm install -g --production windows-build-tools
   "targets": [
     {
       "target_name": "hello",
-      "sources": ["hello.c"]
+      "sources": ["hello.cc"]
     }
   ]
 }
 ```
-## Файл hello.c
+## Файл hello.cc
 ```cpp
-// hello.c
+// hello.cc
 
 #include <node.h>
 
