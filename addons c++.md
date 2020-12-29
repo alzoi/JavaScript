@@ -1,5 +1,5 @@
 # C++ addons
-Разработка модулей расширения (addons) Node.js на языке C++.  
+Разработка модулей расширения (аддонов addons) Node.js на языке C++.  
 https://nodejs.org/api/addons.html  
 https://js-node.ru/site/article?id=12  
 
