@@ -6,7 +6,7 @@ https://js-node.ru/site/article?id=12
 
 # Установка необходимых инструментов
 ```
-nmp init -y
+npm init -y
 npm i -g node-gyp
 npm install -g --production windows-build-tools
 ```
