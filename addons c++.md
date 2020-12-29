@@ -1,3 +1,7 @@
+# C++ addons
+https://nodejs.org/api/addons.html  
+Разработка модулей расширения (addons) Node.js на языке C++.
+
 # Установка необходимых инструментов
 ```
 nmp init -y
@@ -36,6 +40,7 @@ namespace hello {
     Isolate* isolate = args.GetIsolate();
     // args.GetReturnValue().Set(String::NewFromUtf8(isolate, "world").ToLocalChecked());
     
+    // Бизнес логика метода расширения.
     int i;
     double x = 100.32462344, y = 200.33345344;
     for(i=0; i < 2'000'000'000; ++i){
@@ -46,7 +51,7 @@ namespace hello {
     //Local<Number> total = Number::New(isolate, x);
     args.GetReturnValue().Set(total);
   }
-  // Экспортируем метод наружу под именем calc.
+  // Определяем функцию инициализации экспортируем метод-addon наружу под именем calc.
   void Initialize(Local<Object> exports) {
     NODE_SET_METHOD(exports, "calc", Method);
   }
