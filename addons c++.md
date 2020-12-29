@@ -1,6 +1,6 @@
 # Установка необходимых инструментов
 ```
-nmp init
+nmp init -y
 npm i -g node-gyp
 npm install -g --production windows-build-tools
 ```
@@ -84,7 +84,7 @@ console.timeEnd('js');
 ## Сборка C++addons модулей
 ```
 node-gyp configure
-node-gyp build
+node-gyp -m build
 ```
 ## Запуск кода
 ```
