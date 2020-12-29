@@ -16,7 +16,7 @@ npm install -g --production windows-build-tools
 }
 ```
 ## Файл hello.c
-```
+```cpp
 // hello.c
 
 #include <node.h>
