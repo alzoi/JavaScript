@@ -50,8 +50,7 @@ namespace hello {
   void Initialize(Local<Object> exports) {
     NODE_SET_METHOD(exports, "calc", Method);
   }
-
-  NODE_MODULE(NODE_GYP_MODULE_NAME, Initialize);
+  NODE_MODULE(NODE_GYP_MODULE_NAME, Initialize)
 
 }
 ```
