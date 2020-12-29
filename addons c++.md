@@ -9,7 +9,7 @@ npm install -g --production windows-build-tools
 {
   "targets": [
     {
-      "target_name": "calculate",
+      "target_name": "main",
       "sources": ["main.c"]
     }
   ]
