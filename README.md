@@ -26,11 +26,11 @@
 https://nickcode.ru/sapui5/urok-1-sapui5-pervaya-programma-hello-world.html  
 
 # Циклы
-http://jsraccoon.ru/fn-array-methods
+http://jsraccoon.ru/fn-array-methods  
 https://learn.javascript.ru/array-iteration
 
 # Асинхронность в JavaScript
-https://flaviocopes.com/javascript-async-await-array-map/
+https://flaviocopes.com/javascript-async-await-array-map/  
 https://www.sitepoint.com/delay-sleep-pause-wait/
 
 # App Ideas
