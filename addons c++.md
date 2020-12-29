@@ -30,6 +30,7 @@ npm install -g --production windows-build-tools
 // Пространство имён модуля hello.
 namespace hello {
 
+  // Используемые классы из пространства имён v8.
   using v8::FunctionCallbackInfo;
   using v8::Isolate;
   using v8::Local;
