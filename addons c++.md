@@ -71,13 +71,18 @@ function calc_js() {
 }
 
 // Скорость работы кода C++.
+let e = 0;
 console.time('c++');
-console.log(hello.calc());
+e = hello.calc()
+console.log('total = ' + e);
 console.timeEnd('c++');
+
+console.log('');
 
 // Скорость работы кода JavaScript.
 console.time('js');
-console.log(calc_js());
+e = calc_js();
+console.log('total = ' + e);
 console.timeEnd('js');
 ```
 
@@ -93,8 +98,9 @@ node index.js
 
 ## Вывод
 ```
-400666902243.5126
-c++: 2879.506ms
-400666902243.5126
-js: 5738.011ms
+total = 400666902243.5126
+c++: 2889.189ms
+
+total = 400666902243.5126
+js: 5736.523ms
 ```
