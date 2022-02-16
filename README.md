@@ -5,7 +5,8 @@
 [Насколько важен порядок свойств в объектах JavaScript?](https://habr.com/ru/post/486162/)  
 [Как работает JavaScript](https://habr.com/ru/company/ruvds/blog/482472/)
 https://just.billywhizz.io/blog/on-javascript-performance-01/  
-[just-js очень маленькая среда выполнения javascript v8 только для Linux](https://github.com/just-js/just)
+[just-js очень маленькая среда выполнения javascript v8 только для Linux](https://github.com/just-js/just)  
+[Знай свой JIT: ближе к машине](https://habr.com/ru/company/oleg-bunin/blog/417459/)
 
 # TypeScript
 https://www.typescriptlang.org/docs/handbook/2/mapped-types.html#mapping-modifiers  
