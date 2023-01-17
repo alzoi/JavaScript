@@ -43,3 +43,7 @@ https://www.sitepoint.com/delay-sleep-pause-wait/
 
 # App Ideas
 https://github.com/app-ideas/app-ideas
+
+# Графика
+https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D  
+
