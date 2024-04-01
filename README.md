@@ -47,3 +47,6 @@ https://github.com/app-ideas/app-ideas
 # Графика
 https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D  
 
+# Ошибка CORS
+Запустить браузер с опцией  
+"chrome.exe" --disable-web-security --user-data-dir="[some directory here]"
