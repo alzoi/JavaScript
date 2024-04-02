@@ -32,7 +32,7 @@ function execute(commands) {
 	tic();
 	worker.onmessage = function (event) {
 		var results = event.data.results;
-		toc("Executing SQL");
+		toc("Выполнение SQL");
 		if (!results) {
 			error({message: event.data.error});
 			return;
@@ -43,10 +43,10 @@ function execute(commands) {
 		for (var i = 0; i < results.length; i++) {
 			outputElm.appendChild(tableCreate(results[i].columns, results[i].values));
 		}
-		toc("Displaying results");
+		toc("Отображение результатов");
 	}
 	worker.postMessage({ action: 'exec', sql: commands });
-	outputElm.textContent = "Fetching results...";
+	outputElm.textContent = "Получение результатов...";
 }
 
 // Создать HTML таблицу
@@ -93,7 +93,7 @@ dbFileElm.onchange = function () {
 	r.onload = function () {
 		worker.onmessage = function () {
 			toc("Loading database from file");
-      commandsElm.value = "SELECT name,hired_on FROM employees ORDER BY hired_on;";
+      			commandsElm.value = "SELECT name,hired_on FROM employees ORDER BY hired_on;";
 			execEditorContents();
 		};
 		tic();
