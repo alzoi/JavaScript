@@ -5,7 +5,7 @@ var commandsElm = document.getElementById('commands');
 var dbFileElm   = document.getElementById('dbfile');
 var savedbElm   = document.getElementById('savedb');
 
-// Загрузить через worker библиотеку worker.sql-asm.js
+// Загрузить через Web Workers API библиотеку worker.sql-asm.js
 var worker = new Worker("worker.sql-asm.js");
 worker.onerror = error;
 
