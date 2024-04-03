@@ -16,6 +16,10 @@ https://emscripten.org/
 ```
 emcc my_add.c -O2 -profiling -s ONLY_MY_CODE=1 -g2 --separate-asm -o abc.js
 ```
+Компиляция в быстрый код wasm, для подключения библиотеки необхидимо решить ошибку браузера CORS
+```
+emcc hello.c -O2 -s WASM=1 -s ONLY_MY_CODE=1 -s EXPORTED_FUNCTIONS="['_add']" -o hello.js
+```
 
 # TypeScript
 https://www.typescriptlang.org/docs/handbook/2/mapped-types.html#mapping-modifiers  
