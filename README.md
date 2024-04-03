@@ -11,6 +11,7 @@ https://just.billywhizz.io/blog/on-javascript-performance-01/
 # WebAssembly (Wasm)
 https://emscripten.org/  
 [Загрузка Wasm в JavaScript](https://metanit.com/cpp/webassembly/1.3.php)  
+https://developer.mozilla.org/ru/docs/WebAssembly/C_to_Wasm  
 
 Пример получения JavaScript кода из исходника C в формате asm.js который работает в большинствек браузеров, работает медленее wasm
 ```
