@@ -16,6 +16,8 @@ https://developer.mozilla.org/ru/docs/WebAssembly/C_to_Wasm
 Пример получения JavaScript кода из исходника C в формате asm.js который работает в большинствек браузеров, работает медленее wasm
 ```
 emcc my_add.c -O2 -profiling -s ONLY_MY_CODE=1 -g2 --separate-asm -o abc.js
+или
+emcc my_add.c -O2 -profiling -s ONLY_MY_CODE=1 WASM=0 -g2 -o abc.js
 ```
 Компиляция в быстрый код wasm, для подключения библиотеки необхидимо решить ошибку браузера CORS
 ```
