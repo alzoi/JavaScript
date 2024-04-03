@@ -43,19 +43,17 @@
   // Асинхронная загрузка slq.js через async
   async function run() {
   
-    const initSqlJs = window.initSqlJs;
-  
+    const initSqlJs = window.initSqlJs;  
     const SQL = await initSqlJs();
-  
     const db = new SQL.Database();
   
     let sqlstr = `CREATE TABLE hello (a int, b char, c char);
       INSERT INTO hello VALUES (0, 'hello', 'line0');
       INSERT INTO hello VALUES (1, 'world', 'line1');`;
   
-    await db.run(sqlstr);
+    db.run(sqlstr);
    
-    const stmt = await db.prepare("SELECT * FROM hello WHERE a=$a AND b=$b");
+    const stmt = db.prepare("SELECT * FROM hello WHERE a=$a AND b=$b");
     const result = stmt.getAsObject({ $a: 1, $b: 'world' });
   
     console.log(result);
