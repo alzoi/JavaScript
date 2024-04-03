@@ -8,6 +8,10 @@ https://just.billywhizz.io/blog/on-javascript-performance-01/
 [just-js очень маленькая среда выполнения javascript v8 только для Linux](https://github.com/just-js/just)  
 [Знай свой JIT: ближе к машине](https://habr.com/ru/company/oleg-bunin/blog/417459/)
 
+# WebAssembly (Wasm)
+https://emscripten.org/  
+[Загрузка Wasm в JavaScript](https://metanit.com/cpp/webassembly/1.3.php)
+
 # TypeScript
 https://www.typescriptlang.org/docs/handbook/2/mapped-types.html#mapping-modifiers  
 https://habr.com/ru/post/648805/  
