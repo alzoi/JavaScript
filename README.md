@@ -25,6 +25,7 @@ emcc hello.c -O2 -s WASM=1 -s ONLY_MY_CODE=1 -s EXPORTED_FUNCTIONS="['_add']" -o
 ```
 
 # Модули
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Modules  
 https://github.com/mdn/js-examples/blob/main/module-examples/classes/main.js
 
 # TypeScript
