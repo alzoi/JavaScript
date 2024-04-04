@@ -74,7 +74,7 @@ function execEditorContents() {
 
 execBtn.addEventListener("click", execEditorContents, true);
 
-// Функционал для замена производительности.
+// Функционал для замера производительности.
 var tictime;
 
 if (!window.performance || !performance.now) { window.performance = { now: Date.now } }
