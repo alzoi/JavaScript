@@ -24,6 +24,9 @@ emcc my_add.c -O2 -profiling -s ONLY_MY_CODE=1 WASM=0 -g2 -o abc.js
 emcc hello.c -O2 -s WASM=1 -s ONLY_MY_CODE=1 -s EXPORTED_FUNCTIONS="['_add']" -o hello.js
 ```
 
+# Модули
+https://github.com/mdn/js-examples/blob/main/module-examples/classes/main.js
+
 # TypeScript
 https://www.typescriptlang.org/docs/handbook/2/mapped-types.html#mapping-modifiers  
 https://habr.com/ru/post/648805/  
