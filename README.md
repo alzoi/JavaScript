@@ -29,6 +29,10 @@ emcc hello.c -O2 -s WASM=1 -s ONLY_MY_CODE=1 -s EXPORTED_FUNCTIONS="['_add']" -o
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Modules  
 https://github.com/mdn/js-examples/blob/main/module-examples/classes/main.js  
 https://wp-kama.ru/note/js-moduli-v-brauzere  
+В консоли браузера для импортирования объектов из JavaScript модуля необходимо вызвать команду
+```
+import('./src/module1.js').then(module => console.log(module));
+```
 
 # TypeScript
 https://www.typescriptlang.org/docs/handbook/2/mapped-types.html#mapping-modifiers  
