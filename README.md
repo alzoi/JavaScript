@@ -33,6 +33,8 @@ https://wp-kama.ru/note/js-moduli-v-brauzere
 ```
 import('./src/module1.js').then(module => console.log(module));
 ```
+# Создание html элементов
+https://www.youtube.com/watch?v=tlcEXDGo0oY
 
 # TypeScript
 https://www.typescriptlang.org/docs/handbook/2/mapped-types.html#mapping-modifiers  
