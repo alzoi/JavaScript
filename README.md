@@ -38,7 +38,8 @@ https://www.youtube.com/watch?v=tlcEXDGo0oY
 https://www.youtube.com/watch?v=2I7uX8m0Ta0  
 https://www.youtube.com/watch?v=BL3L_ON9gt8  
 https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements  
-https://learn.javascript.ru/web-components
+https://learn.javascript.ru/web-components  
+https://www.youtube.com/watch?v=Y3EH4tCS6ig  
 
 # TypeScript
 https://www.typescriptlang.org/docs/handbook/2/mapped-types.html#mapping-modifiers  
