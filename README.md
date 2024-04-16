@@ -8,6 +8,7 @@ https://developer.mozilla.org/ru/docs/Learn/JavaScript
 https://just.billywhizz.io/blog/on-javascript-performance-01/  
 [just-js очень маленькая среда выполнения javascript v8 только для Linux](https://github.com/just-js/just)  
 [Знай свой JIT: ближе к машине](https://habr.com/ru/company/oleg-bunin/blog/417459/)
+[Уроки Javascript для Начинающих 2022](https://www.youtube.com/playlist?list=PLtL3lrXPn2rXYAkRYdTKOQLRUW1Gdp4v2)  
 
 # WebAssembly (Wasm)
 https://emscripten.org/  
